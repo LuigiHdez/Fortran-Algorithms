@@ -1,29 +1,30 @@
-!This program calculates the factorial of a number entered by the user.
+!Este programa calcula el factorial de un numero entero positivo ingresado por el usuario.
 
 program factorial
 
-	!Declare variables
-	implicit none
-	integer :: n,i
-	integer :: factorial_result
+        !Declaramos variables
+        implicit none
+        integer :: n,i
+        integer :: factorial_result
 
-	!Prompt user for a positive numer
-	print *, 'Ingrese un numero positivo:'
-	read(*, *) n
+        !Solicitamos un numero entero positivo al usuario
+        print *, 'Ingrese un numero entero positivo:'
+        read(*, *) n
 
-	!Check if the number entered is positive
-	if (n<0) then
-		print *, 'Ingrese un numero positivo'
-	endif
+        !Verificamos que el numero ingresado por el usuario, sea un entero positivo
+        if (n<0) then
+                print *, 'Ingrese un numero entero positivo'
+        endif
 
-	!Calculate the factorial of n
-	factorial_result = 1
-	do i = 1, n
-		factorial_result = factorial_result * i
+        !Calculamos el factorial del numero ingresado por el usuario
+        factorial_result = 1
+        do i = 1, n
+                factorial_result = factorial_result * i
+        end do
 
-	end do
+        !Mostramos el resultado del factorial de dicho numero
+        print *, 'El resultado del factorial de', n, 'es', factorial_result
 
-	!Display the result of the factorial of n
-	print *, 'El resultado del factorial de', n, 'es', factorial_result
-	
 end program factorial
+
+
